@@ -11,27 +11,27 @@
       <h1>Лабораторная работа №1</h1>
       <div class="tabs" id="dsssss">
         <input id="tab1" type="radio" name="tabs" checked />
-        <label class="labl" for="tab1" name="sssllll">вкладка 1</label>
+        <label class="labl" for="tab1" name="sssllll">Задание 1</label>
         <input id="tab2" type="radio" name="tabs" />
-        <label class="labl" for="tab2">вкладка 2</label>
+        <label class="labl" for="tab2">Задание 2</label>
         <input id="tab3" type="radio" name="tabs" />
-        <label class="labl" for="tab3">вкладка 3</label>
+        <label class="labl" for="tab3">Задание 3</label>
         <input id="tab4" type="radio" name="tabs" />
-        <label class="labl" for="tab4">вкладка 4</label>
+        <label class="labl" for="tab4">Задание 4</label>
         <input id="tab5" type="radio" name="tabs" />
-        <label class="labl" for="tab5">вкладка 4</label>
+        <label class="labl" for="tab5">Задание 5</label>
         <input id="tab6" type="radio" name="tabs" />
-        <label class="labl" for="tab6">вкладка 4</label>
+        <label class="labl" for="tab6">Задание 6</label>
         <input id="tab7" type="radio" name="tabs" />
-        <label class="labl" for="tab7">вкладка 4</label>
+        <label class="labl" for="tab7">Задание 7</label>
         <input id="tab8" type="radio" name="tabs" />
-        <label class="labl" for="tab8">вкладка 4</label>
+        <label class="labl" for="tab8">Задание 8</label>
         <input id="tab9" type="radio" name="tabs" />
-        <label class="labl" for="tab9">вкладка 4</label>
+        <label class="labl" for="tab9">Задание 9</label>
         <input id="tab10" type="radio" name="tabs" />
-        <label class="labl" for="tab10">вкладка 4</label>
+        <label class="labl" for="tab10">Задание 10</label>
         <input id="tab11" type="radio" name="tabs" />
-        <label class="labl" for="tab11">вкладка 4</label>
+        <label class="labl" for="tab11">Задание 11</label>
         <section id="content1">
           <h2>
             Составить сценарий, в котором вычисляется площадь круга по заданному
@@ -333,7 +333,18 @@
           <h2></h2>
           <div class="col_left colums"></div>
           <div class="col_right colums">
-            <code> </code>
+            <code
+              >dsssss.onmouseover = function(evant) {<br />
+              if (evant.target.className == "labl") {<br />
+              evant.target.className = "lablover";<br />
+              }<br />
+              };<br />
+              dsssss.onmouseout = function(evant) {<br />
+              if (evant.target.className == "lablover") {<br />
+              evant.target.className = "labl";<br />
+              }<br />
+              };
+            </code>
           </div>
           <div style="clear: both;"></div>
         </section>
