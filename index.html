@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Лабораторная работа №1</h1>
+      <div class="tabs" id="dsssss">
+        <input id="tab1" type="radio" name="tabs" checked />
+        <label class="labl" for="tab1" name="sssllll">вкладка 1</label>
+        <input id="tab2" type="radio" name="tabs" />
+        <label class="labl" for="tab2">вкладка 2</label>
+        <input id="tab3" type="radio" name="tabs" />
+        <label class="labl" for="tab3">вкладка 3</label>
+        <input id="tab4" type="radio" name="tabs" />
+        <label class="labl" for="tab4">вкладка 4</label>
+        <input id="tab5" type="radio" name="tabs" />
+        <label class="labl" for="tab5">вкладка 4</label>
+        <input id="tab6" type="radio" name="tabs" />
+        <label class="labl" for="tab6">вкладка 4</label>
+        <input id="tab7" type="radio" name="tabs" />
+        <label class="labl" for="tab7">вкладка 4</label>
+        <input id="tab8" type="radio" name="tabs" />
+        <label class="labl" for="tab8">вкладка 4</label>
+        <input id="tab9" type="radio" name="tabs" />
+        <label class="labl" for="tab9">вкладка 4</label>
+        <input id="tab10" type="radio" name="tabs" />
+        <label class="labl" for="tab10">вкладка 4</label>
+        <input id="tab11" type="radio" name="tabs" />
+        <label class="labl" for="tab11">вкладка 4</label>
+        <section id="content1">
+          <h2>
+            Составить сценарий, в котором вычисляется площадь круга по заданному
+            радиусу.
+          </h2>
+          <div class="col_left colums">
+            Укажите радиус
+            <input type="text" size="7" name="radius_in" onchange="r()" /><br />
+            Ваша площадь : <em id="radius_out"></em><br />
+          </div>
+          <div class="col_right colums">
+            <code>
+              function r() {<br />
+              var radius = document.getElementsByName("radius_in")[0].value;<br />
+              document.getElementById("radius_out").innerText = 3.14 * (radius *
+              radius);<br />
+              }
+            </code>
+          </div>
+          <div style="clear: both;"></div>
+        </section>
+        <section id="content2">
+          <h2>
+            Составить сценарий, вычисляющий гипотенузу по заданным катетам.
+          </h2>
+          <div class="col_left colums">
+            <p>Вычисление гипотенузы</p>
+            Длина первого катета :
+            <input
+              type="text"
+              size="7"
+              name="katet1"
+              onchange="gipot()"
+            /><br />
+
+            Длина второго катета :
+            <input
+              type="text"
+              size="7"
+              name="katet2"
+              onchange="gipot()"
+            /><br />
+            Значение гипотинузы :
+            <em id="gipot"></em>
+          </div>
+          <div class="col_right colums">
+            <code
+              >function gipot() {<br />
+              var k1 = document.getElementsByName("katet1")[0].value;<br />
+              var k2 = document.getElementsByName("katet2")[0].value;<br />
+              document.getElementById("gipot").innerText = Math.sqrt(k1 * k1 +
+              k2 * k2);<br />
+              }
+            </code>
+          </div>
+          <div style="clear: both;"></div>
+        </section>
+        <section id="content3">
+          <h2>
+            На плоскости заданы координаты трех точек. Напишите сценарий,
+            который вычисляет площадь треугольника (использовать событие Focus).
+          </h2>
+          <div class="col_left colums">
+            <p>Площадь треугольника через координаты</p>
+            <label style="margin-left: 40px"> x</label>
+            <label style="margin-left: 40px"> y</label><br />
+            <label>A1</label>
+            <input type="text" size="2" name="x1" id="foc" />
+            <em id="nowonfocus"></em>
+            <input type="text" size="2" name="y1" /><br />
+            <label>A2</label><input type="text" size="2" name="x2" />
+            <input type="text" size="2" name="y2" /><br />
+            <label>A3</label><input type="text" size="2" name="x3" />
+            <input type="text" size="2" name="y3" /><br />
+            <label> S =</label>
+            <input type="button" value="result" onclick="treangl()" />
+            <em id="resultreangl"></em>
+          </div>
+          <div class="col_right colums">
+            <code>
+              foc.onfocus = function() {<br />
+              this.value = "";<br />
+              document.getElementById("nowonfocus").innerText = "on focus";<br />
+              };<br /><br />
+              function treangl() {<br />
+              var x1 = document.getElementsByName("x1")[0].value;<br />
+              var x2 = document.getElementsByName("x2")[0].value;<br />
+              var x3 = document.getElementsByName("x3")[0].value;<br />
+              var y1 = document.getElementsByName("y1")[0].value;<br />
+              var y2 = document.getElementsByName("y2")[0].value;<br />
+              var y3 = document.getElementsByName("y3")[0].value;<br />
+              var sr = (x1 - x3) * (y2 - y3);<br />
+              var res = sr - (y1 - y3) * (x2 - x3);<br />
+              document.getElementById("resultreangl").innerText = Math.abs(res /
+              2);<br />
+              }</code
+            >
+          </div>
+          <div style="clear: both;"></div>
+        </section>
+        <section id="content4">
+          <h2>
+            Напишите сценарий, который для точки, заданной координатами на
+            плоскости, определяет расстояние до начала координат (использовать
+            событие Select).
+          </h2>
+          <div class="col_left colums">
+            <p>до начала координат</p>
+            <label>end pount</label> <input type="text" size="2" name="xend" />
+            <input type="text" size="2" name="yend" /><br />
+            <input type="text" value="Выдели меня" id="select" />
+          </div>
+          <div class="col_right colums">
+            <code>
+              select.onselect = function() {<br />
+              var xend = document.getElementsByName("xend")[0].value;<br />
+              var yend = document.getElementsByName("yend")[0].value;<br />
+              var resu = Math.sqrt(xend * xend + yend * yend);<br />
+              this.value = resu;<br />
+              };</code
+            >
+          </div>
+          <div style="clear: both;"></div>
+        </section>
+        <section id="content5">
+          <h2>
+            Напишите сценарий, который обменивает местами значения двух
+            введенных переменных (использовать событие Blur).
+          </h2>
+          <div class="col_left colums">
+            <p>замена значений</p>
+            <input type="text" size="5" name="position1" id="pos1" />
+            <input type="text" size="5" name="position2" id="pos2" />
+          </div>
+          <div class="col_right colums">
+            <code
+              >pos1.onblur = function() {<br />
+              var pos2 = document.getElementsByName("position2")[0].value;<br />
+              document.getElementsByName("position2")[0].value =<br />
+              document.getElementsByName( "position1" )[0].value;<br />
+              document.getElementsByName("position1")[0].value = pos2;<br />
+              };<br />
+              pos2.onblur = function() {<br />
+              var pos1 = document.getElementsByName("position1")[0].value;<br />
+              document.getElementsByName("position1")[0].value =<br />
+              document.getElementsByName( "position2" )[0].value;<br />
+              document.getElementsByName("position2")[0].value = pos1;<br />
+              };
+            </code>
+          </div>
+          <div style="clear: both;"></div>
+        </section>
+        <section id="content6">
+          <h2>
+            Вводится последовательность из пяти чисел. Напишите сценарий, в
+            котором определяется число максимальных элементов.
+          </h2>
+          <div class="col_left colums">
+            <h4>Вычисление максимального значения</h4>
+            <input type="text" size="4" name="itm1" />
+            <input type="text" size="4" name="itm1" />
+            <input type="text" size="4" name="itm1" />
+            <input type="text" size="4" name="itm1" />
+            <input type="text" size="4" name="itm1" />
+            <button onclick="maxitm()">ВЫЧИСЛИТЬ</button>
+            <em id="maxitmout"></em>
+          </div>
+          <div class="col_right colums">
+            <code>
+              function maxitm() {<br />
+              var itms = document.getElementsByName("itm1");<br />
+
+              document.getElementById("maxitmout").innerText =<br />
+              Math.max.apply(null, [ itms[0].value, itms[1].value,
+              itms[2].value, itms[3].value, itms[4].value ]); }</code
+            >
+          </div>
+          <div style="clear: both;"></div>
+        </section>
+        <section id="content7">
+          <h2>
+            Напишите программу, которая определяет, можно ли построить
+            треугольник с заданными длинами сторон.
+          </h2>
+          <div class="col_left colums">
+            <input type="text" size="2" name="side_T" />
+            <input type="text" size="2" name="side_T" />
+            <input type="text" size="2" name="side_T" />
+            <button onclick="side_trued()">Вычислить</button>
+            <em id="side_trued"></em>
+          </div>
+          <div class="col_right colums">
+            <code>
+              function side_trued() {<br />
+              side_t = document.getElementsByName("side_T");<br />
+              a = side_t[0].value;<br />
+              b = side_t[1].value;<br />
+              c = side_t[2].value;<br />
+              if (a + b > c && a + c > b && c + b > a) {<br />
+              document.getElementById("side_trued").innerText = "true";<br />
+              } else {<br />
+              document.getElementById("side_trued").innerText = "false";<br />
+              } }</code
+            >
+          </div>
+          <div style="clear: both;"></div>
+        </section>
+        <section id="content8">
+          <h2>
+            Точка на плоскости задается своими координатами. Определите, какой
+            из четвертей прямоугольной системы координат принадлежит заданная
+            точка
+          </h2>
+          <div class="col_left colums">
+            x =<input type="text" size="2" name="fourth" /><br />
+            y =<input type="text" size="2" name="fourth" /><br />
+            <button onclick="Fourth()">
+              ВЫЧИСЛИТЬ
+            </button>
+            <br /><em id="fourth"></em>
+          </div>
+          <div class="col_right colums">
+            <code
+              >function Fourth() {<br />
+              fourth = document.getElementsByName("fourth");<br />
+              var x = fourth[0].value;<br />
+              var y = fourth[1].value;<br />
+              var F;<br />
+              if (y > 0) {<br />
+              if (x > 0) f = 1;<br />
+              else f = 2;<br />
+              } else {<br />
+              if (x > 0) f = 4;<br />
+              else f = 3;<br />
+              }<br />
+              document.getElementById("fourth").innerText = "fourth " + f;<br />
+              }
+            </code>
+          </div>
+          <div style="clear: both;"></div>
+        </section>
+        <section id="content9">
+          <h2>
+            Написать сценарий выбора из трех изображений одного, которое
+            вставляется ниже этих трех.
+          </h2>
+          <div class="col_left colums">
+            <div style="display: flex; flex-direction: column;">
+              <img class="imgs" src="1.jpg" onclick="img(0)" />
+              <img class="imgs" src="2.jpg" onclick="img(1)" />
+              <img class="imgs" src="3.jpg" onclick="img(2)" />
+            </div>
+          </div>
+          <div class="col_right colums">
+            <code>
+              function img(n) {<br />
+              var imgs = document.images;<br />
+              if (n == 1) {<br />
+              var buf = imgs[1].src;<br />
+              imgs[1].src = imgs[2].src;<br />
+              imgs[2].src = buf;<br />
+              }<br />
+              if (n == 0) {<br />
+              var buf = imgs[0].src;<br />
+              imgs[0].src = imgs[1].src;<br />
+              imgs[1].src = imgs[2].src;<br />
+              imgs[2].src = buf;<br />
+              } }</code
+            >
+          </div>
+          <div style="clear: both;"></div>
+        </section>
+        <section id="content10">
+          <h2>
+            Написать сценарий картинки с "эффектом приближения", т.е. увеличения
+            размеров как реакция на попадание курсора мыши в поле рисунка
+            (использовать свойства width и height).
+          </h2>
+          <div class="col_left colums">
+            <img
+              src="2.jpg"
+              height="140"
+              width="151"
+              onmouseout="resize(this, 140, 151)"
+              onmouseover="resize(this, 200, 222)"
+            />
+          </div>
+          <div class="col_right colums">
+            <code
+              >function resize(img, x, y) {<br />
+              img.width = x;<br />
+              img.height = y;<br />
+              }
+            </code>
+          </div>
+          <div style="clear: both;"></div>
+        </section>
+        <section id="content11">
+          <h2></h2>
+          <div class="col_left colums"></div>
+          <div class="col_right colums">
+            <code> </code>
+          </div>
+          <div style="clear: both;"></div>
+        </section>
+      </div>
+    </div>
+    <script src="init.js"></script>
+  </body>
+</html>

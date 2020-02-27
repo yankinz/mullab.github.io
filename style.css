@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  margin-top: 50px;
+}
+.tabs {
+  width: 1500px;
+  padding: 0px;
+  margin: 0 auto;
+  position: relative;
+}
+h1,
+h2 {
+  text-align: center;
+}
+.col_left {
+  float: left;
+  width: 50%;
+  border: 1px solid slategray;
+}
+.col_right {
+  float: right;
+}
+.colums {
+  margin: 5px;
+  padding: 14px;
+  width: 48%;
+  height: 500px;
+  border: 1px solid slategray;
+}
+.colums input {
+  display: unset;
+}
+.imgs {
+  height: 150px;
+  width: 150px;
+}
+
+section {
+  display: none;
+  padding: 15px;
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 180px;
+}
+p {
+  margin: 0;
+}
+input {
+  display: none;
+}
+.labl {
+  display: block;
+  width: 150px;
+  padding: 15px;
+  color: #4f5966;
+  background: #dee8f2;
+  cursor: pointer;
+  margin-left: 30px;
+}
+.lablover {
+  display: block;
+  width: 180px;
+  padding: 15px;
+  color: #4f5966;
+  background: #cfe4f9;
+  cursor: pointer;
+  box-shadow: -20px 20px 0 -17px #eee, 20px -20px 0 -17px #eee,
+    20px 20px 0 -20px #592385, 0 0 0 2px #592385;
+}
+
+input:checked + label {
+  color: #555;
+  background: white;
+  border: 1px solid slategray;
+}
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4,
+#tab5:checked ~ #content5,
+#tab6:checked ~ #content6,
+#tab7:checked ~ #content7,
+#tab8:checked ~ #content8,
+#tab9:checked ~ #content9,
+#tab10:checked ~ #content10,
+#tab11:checked ~ #content11 {
+  display: block;
+  width: 1310px;
+  border: 1px solid #dee8f2;
+}
+section {
+  animation: scale 0.7s ease-in-out;
+}
+@keyframes scale {
+  0% {
+    transform: scale(0.98);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.005);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
