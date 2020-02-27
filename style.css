@@ -67,8 +67,6 @@ input {
   color: #4f5966;
   background: #cfe4f9;
   cursor: pointer;
-  box-shadow: -20px 20px 0 -17px #eee, 20px -20px 0 -17px #eee,
-    20px 20px 0 -20px #592385, 0 0 0 2px #592385;
 }
 
 input:checked + label {
@@ -90,6 +88,7 @@ input:checked + label {
   display: block;
   width: 1310px;
   border: 1px solid #dee8f2;
+  margin-left: 2px;
 }
 section {
   animation: scale 0.7s ease-in-out;
