@@ -72,9 +72,9 @@ function maxitm() {
 }
 function side_trued() {
   side_t = document.getElementsByName("side_T");
-  a = side_t[0].value;
-  b = side_t[1].value;
-  c = side_t[2].value;
+  a = Number(side_t[0].value);
+  b = Number(side_t[1].value);
+  c = Number(side_t[2].value);
   if (a + b >= c && a + c >= b && c + b >= a) {
     document.getElementById("side_trued").innerText = "true";
   } else {
