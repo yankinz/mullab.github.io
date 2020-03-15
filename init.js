@@ -75,7 +75,7 @@ function side_trued() {
   a = side_t[0].value;
   b = side_t[1].value;
   c = side_t[2].value;
-  if (a + b > c && a + c > b && c + b > a) {
+  if (a + b >= c && a + c >= b && c + b >= a) {
     document.getElementById("side_trued").innerText = "true";
   } else {
     document.getElementById("side_trued").innerText = "false";
