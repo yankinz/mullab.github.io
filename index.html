@@ -230,7 +230,7 @@
               a = side_t[0].value;<br />
               b = side_t[1].value;<br />
               c = side_t[2].value;<br />
-              if (a + b > c && a + c > b && c + b > a) {<br />
+              if (a + b >= c && a + c >= b && c + b >= a) {<br />
               document.getElementById("side_trued").innerText = "true";<br />
               } else {<br />
               document.getElementById("side_trued").innerText = "false";<br />
